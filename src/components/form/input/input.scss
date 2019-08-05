@@ -1,0 +1,33 @@
+@import "./../form.scss";
+
+.#{$prefix}-input{
+  $root: &;
+
+  @include inputStyleWrapper;
+  input{@include inputStyle;}
+  
+  &__prefix, &__sufix{
+    color: color("dark",6);
+  }
+  &--focus{
+    #{$root}__url-placeholder{
+      display: none;
+    }
+  }
+  .dontshow{
+    transition: opacity .3s ease;
+    opacity: 0;
+  }
+  &__url-placeholder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 16px;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

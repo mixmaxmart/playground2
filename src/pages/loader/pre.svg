@@ -1,0 +1,25 @@
+<svg width="48" height="48" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle 
+      id="movable"
+      cx="25" cy="25" r="21" 
+      stroke="#3A57E9" 
+      stroke-width="4" 
+      stroke-dasharray="40 100"
+      stroke-linecap="round"
+    />
+    <circle 
+      cx="25" cy="25" r="21" 
+      stroke="#3A57E9" 
+      stroke-width="4"
+      opacity=".2" 
+    />
+    <animateTransform 
+      attributeType="xml" 
+      attributeName="transform" 
+      type="rotate" 
+      from="0" to="360" 
+      begin="0" dur="1.5s" 
+      repeatCount="indefinite" 
+    />
+
+</svg>

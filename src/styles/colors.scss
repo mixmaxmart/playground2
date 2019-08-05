@@ -1,0 +1,6 @@
+@function color ($key,$tone:1,$opacity:1){
+  @if $key == "white" {@return hsla(0,0,100,$opacity)};
+  @if $key == "grey"  {@return hsla(210,11,100 - $tone*5,$opacity)};
+  @if $key == "dark"  {@return hsla(210,11,$tone*10,$opacity)}
+  @else {@return hsla(0,0,100,$opacity)}
+}

@@ -1,0 +1,50 @@
+@import "./../../styles/vars.scss";
+
+@mixin inputStyleWrapper{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: color("grey",1); 
+  border: 1px solid color("grey",2);
+  border-radius: var(--basic-radius);
+  font-size: 1rem;
+  transition: background-color .3s ease;
+  padding: 0px 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &[data-size]{
+    &[data-size="s"]{height: 32px;}
+    &[data-size="m"]{height: 40px;}
+    &[data-size="l"]{height: 48px;}
+  }
+}
+@mixin inputStyle {
+  font-size: 1rem;
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;;
+    &:focus{
+      // background-color: color(grey,2,.8);
+      box-shadow: none;
+      outline: none;
+      &::placeholder{
+        color: color("dark",7);
+      }
+    }
+    &::placeholder{
+      color: color("dark",6);
+    }
+}
+.#{$prefix}-input-field{
+  flex-direction: column;
+  &--bold{
+    label{
+      @include font('bold');
+    }
+  }
+  label{
+    margin-bottom: 9px; 
+  }
+}

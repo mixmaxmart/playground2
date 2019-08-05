@@ -1,0 +1,30 @@
+:root {
+    $basic-font-size: 14;
+}
+
+@mixin font($options...){
+
+    @each $option in $options {
+
+        @if         $option == 'light'                 {font-weight: 300 }
+        @else if    $option == 'regular'          {font-weight: 500}
+        @else if    $option == 'semi-bold'        {font-weight: 600}
+        @else if    $option == 'bold'             {font-weight: 700}
+
+        @else if    $option == 'uppercase'      {text-transform: uppercase;letter-spacing: 2px;}
+        @else if    $option == 'italic'         {font-style: italic;}
+
+        @else if    $option == 'left'           {text-align: left;}
+        @else if    $option == 'center'         {text-align: center;}
+        @else if    $option == 'right'          {text-align: right;}
+
+        @else if    $option == 'digit'          {font-feature-settings: 'ss01' 1}
+        @else if    $option == 'digit-tab'      {font-feature-settings: 'tnum' 1;font-variant-numeric: tabular-nums;}
+        @else if    $option == 'noselect'       {user-select: none;}
+        @else if    $option == 'noligatures'    {font-variant-ligatures: no-common-ligatures !important;}
+        @else if    $option == 'smooth'         {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+
+        @else {}
+    }
+}
